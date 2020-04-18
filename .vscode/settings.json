@@ -1,0 +1,7 @@
+{
+    "markdownlint.ignore": [
+        "notes.md",
+        "**/test-markdown.md,
+        "**/test-markdown-lines.md"
+    ]
+}
