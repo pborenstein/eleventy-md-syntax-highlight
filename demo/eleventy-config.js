@@ -1,4 +1,4 @@
-const syntaxHighlight = require("../.eleventy.js");
+const syntaxHighlight = require("../plugin.js");
 
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight, {

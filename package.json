@@ -1,17 +1,16 @@
 {
-  "name": "eleventy-md-syntax-highlight",
+  "name": "@pborenstein/eleventy-md-syntax-highlight",
   "version": "1.0.0",
-  "description": "syntax coloring with line numbers for eleventy",
-  "main": ".eleventy.js",
+  "description": "PrismJS highlights with line numbers for Eleventy",
+  "homepage": "https://github.com/pborenstein/eleventy-md-syntax-highlight#readme",
+  "main": "plugin.js",
   "scripts": {
-    "test": "npx ava",
     "demo": "npx @11ty/eleventy --input=demo --output=demo/_site --config=demo/eleventy-config.js"
   },
-  "author": "Philip Borenstein",
+  "author": "Philip Borenstein <pborenstein@gmail.com> (https://pborenstein.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
-    "ava": "^3.5.0"
+    "@11ty/eleventy": "^0.10.0"
   },
   "dependencies": {
     "prismjs": "^1.20.0"
@@ -20,14 +19,14 @@
     "type": "git",
     "url": "git+https://github.com/pborenstein/eleventy-md-syntax-highlight.git"
   },
+  "bugs": {
+    "url": "https://github.com/pborenstein/eleventy-md-syntax-highlight/issues"
+  },
   "keywords": [
     "markdown",
     "eleventy",
     "syntax",
-    "highlight"
-  ],
-  "bugs": {
-    "url": "https://github.com/pborenstein/eleventy-md-syntax-highlight/issues"
-  },
-  "homepage": "https://github.com/pborenstein/eleventy-md-syntax-highlight#readme"
+    "highlight",
+    "line numbers"
+  ]
 }

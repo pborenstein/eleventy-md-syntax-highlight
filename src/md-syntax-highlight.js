@@ -3,26 +3,27 @@ const PrismLoader = require("./PrismLoader");
 
 /**
  *
- *  lang / 1,2,5-8
- *    highlight lines 1,2,5,6,7,8
- *
- *  lang / 1, 9 / 2-4,6
- *    add lines 1, 9
- *    delete lines 2,3,4,6
- *
- *  The parts of fences
+ *  The parts of fences:
  *
  *  ``` lang[#/]fenceOptions
  *  fenceBody
  *  ```
  *
+ *  ```lang#
+ *  turns line numbers on
+ *  ```
+ *
+ *  ```lang#17
+ *  turn line numbers on
+ *  start numbering at 17
+ *  ```
  */
 
-module.exports = function (options = { showLineNumbers: true}) {
+module.exports = function (options = {}) {
 
   let plugin = function ( fenceBody, fenceText) {
 
-      //  if there's nothin after the
+      //  if there's nothing after the
       //  three backquotes, let the
       //  markdown processor handle the fence
 
@@ -30,15 +31,18 @@ module.exports = function (options = { showLineNumbers: true}) {
       return ''
     }
 
+      //  split the fenceText into
+      //  the three parts
+
     let [ language = '',
           fenceMark = '',
           fenceOptions ] = fenceText.split(/\s*(#|\/)\s*/)
 
-    numberingStart = parseInt(fenceOptions, 10)
-    if (isNaN(numberingStart) || fenceMark === '/')
-      numberingStart = 1
+    let numberingStart = parseInt(fenceOptions, 10)
 
-      //  turn the fenceBody into HTML
+    if (isNaN(numberingStart) || fenceMark === '/') {
+      numberingStart = 1
+    }
 
     let html = fenceBody
     if (language !== 'text') {
@@ -50,8 +54,6 @@ module.exports = function (options = { showLineNumbers: true}) {
         //  markdown line. It's hacky, but I'd rather
         //  fix it up here than figure out how to
         //  fix Prism's markdown highlighter
-        //  and some shenanigans for the extra line
-        //  at the end of the table
 
     if (language === 'markdown') {
       html = html.replace(/<\/span>\n<\/span>/g, '</span></span>\n')
@@ -73,11 +75,11 @@ module.exports = function (options = { showLineNumbers: true}) {
     if (options.showLineNumbers || fenceMark === '#') {
       lineNumbersClass = 'line-numbers'
       lineNumbersHTML = '<span aria-hidden="true" class="line-numbers-rows">' +
-                      new Array(numberOfLines + 1).join('<span></span>') +
-                    '</span>'
+                          new Array(numberOfLines + 1).join('<span></span>') +
+                        '</span>'
     }
 
-    numberingStart--  //  css counting increments
+    numberingStart--  //  css increments the counter
                       //  before it paints the number
                       //  so we take a step back
 
@@ -87,7 +89,6 @@ module.exports = function (options = { showLineNumbers: true}) {
                   `</code></pre>`
     return retStr
   }
-
   return plugin
 };
 

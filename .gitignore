@@ -111,3 +111,4 @@ temp/
 # End of https://www.gitignore.io/api/node
 demo/_site/
 _site/
+package-lock.json

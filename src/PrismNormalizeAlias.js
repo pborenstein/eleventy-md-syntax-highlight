@@ -1,3 +1,4 @@
+//  https://github.com/11ty/eleventy-plugin-syntaxhighlight/tree/master/src
 const Prism = require("prismjs");
 
 // This was added to make `ts` resolve to `typescript` correctly.
