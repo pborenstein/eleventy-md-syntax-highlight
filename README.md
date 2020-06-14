@@ -32,7 +32,7 @@ and this plugin are:
 ## Installation
 
 ``` text
-npm install github:pborenstein/eleventy-md-syntax-highlight --save-dev
+npm i @pborenstein/eleventy-md-syntax-highlight --save-dev
 ```
 
 ## Configuration
