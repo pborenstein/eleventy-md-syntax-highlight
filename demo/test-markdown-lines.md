@@ -20,9 +20,9 @@ her indeed uneasy shy polite appear denied. Oh less
 girl no walk. At he spot with five of view.
 ```
 
-`json#`
+`json#/2`
 
-```json#
+```json#/2
 collections: {
   "all": [ items ],
   "categories": {
@@ -36,7 +36,7 @@ collections: {
 
 `json#28`
 
-```json#28
+```json#28/4/5
 collections: {
   "all": [ items ],
   "categories": {
@@ -174,7 +174,7 @@ collections: {
 
 json add/del json/1-3,5,9/0,8,10-12
 
-```json/1-3,5,9/0,8,10-12
+```json#/1-3,5,9/8,10-12
 {
   "all": [...],
   "nav": [...],

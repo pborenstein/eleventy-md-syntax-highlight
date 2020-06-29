@@ -9,7 +9,7 @@ for Eleventy.
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 <details>
-<summary>**Contents**</summary>
+<summary><strong>Contents</strong></summary>
 
 - [Installation](#installation)
 - [Configuration](#configuration)
