@@ -1,6 +1,6 @@
 {
   "name": "@pborenstein/eleventy-md-syntax-highlight",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "PrismJS highlights with line numbers for Eleventy",
   "homepage": "https://github.com/pborenstein/eleventy-md-syntax-highlight#readme",
   "main": "plugin.js",
