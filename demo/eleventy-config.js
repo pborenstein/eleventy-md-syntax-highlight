@@ -5,5 +5,9 @@ module.exports = function(eleventyConfig) {
     showLineNumbers: false
   })
 
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/prismjs/themes/*.css": "css/"
+  })
+
   eleventyConfig.setTemplateFormats("md,css")
 };

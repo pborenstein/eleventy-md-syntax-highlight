@@ -1,6 +1,6 @@
 {
   "name": "@pborenstein/eleventy-md-syntax-highlight",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "PrismJS highlights with line numbers for Eleventy",
   "homepage": "https://github.com/pborenstein/eleventy-md-syntax-highlight#readme",
   "main": "plugin.js",
@@ -10,10 +10,10 @@
   "author": "Philip Borenstein <pborenstein@gmail.com> (https://pborenstein.com/)",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1"
+    "@11ty/eleventy": "^1.0.0"
   },
   "dependencies": {
-    "prismjs": "^1.22.0"
+    "prismjs": "^1.29.0"
   },
   "repository": {
     "type": "git",

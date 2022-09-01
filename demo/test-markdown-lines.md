@@ -3,8 +3,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <link rel="stylesheet" href="../prism-theme.css">
-    <link rel="stylesheet" href="../prism-line-numbers.css">
+    <link rel="stylesheet" href="/prism-line-numbers.css">
+<!--
+    <link rel="stylesheet" href="/css/prism-coy.css">
+    <link rel="stylesheet" href="/css/prism-dark.css">
+    <link rel="stylesheet" href="/css/prism-funky.css">
+    <link rel="stylesheet" href="/css/prism-okaidia.css">
+    <link rel="stylesheet" href="/css/prism-solarizedlight.css">
+-->
+    <link rel="stylesheet" href="/css/prism-tomorrow.css">
+<!--
+    <link rel="stylesheet" href="/css/prism-twilight.css">
+    <link rel="stylesheet" href="/css/prism.css">
+-->
   </head>
   <body>
 

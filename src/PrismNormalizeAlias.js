@@ -1,6 +1,11 @@
 //  https://github.com/11ty/eleventy-plugin-syntaxhighlight/tree/master/src
 const Prism = require("prismjs");
 
+const HARDCODED_ALIASES = {
+  njk: "jinja2",
+  nunjucks: "jinja2",
+};
+
 // This was added to make `ts` resolve to `typescript` correctly.
 // The Prism loader doesn’t seem to always handle aliasing correctly.
 module.exports = function(language) {
@@ -9,6 +14,11 @@ module.exports = function(language) {
     // https://github.com/PrismJS/prism/issues/2146
     const PrismComponents = require("prismjs/components.json");
     let langs = PrismComponents.languages;
+
+    // Manual override
+    if(HARDCODED_ALIASES[language]) {
+      language = HARDCODED_ALIASES[language];
+    }
 
     if(langs[ language ]) {
       return language;
